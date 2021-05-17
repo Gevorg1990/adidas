@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Adidas</title>
+
+<style>
+
+	* {
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	}
+
+	body {
+		font-family: "Poppins", sans-serif;
+		
+	}
+
+	.wrapper {
+		padding: 100px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		perspective: 1000px
+	}
+
+	.container {
+
+		/*background: lightpink;*/
+		width: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	.card {
+
+		transform-style: preserve-3d;
+		border-radius:30px;
+		min-height: 80vh;
+		padding: 2rem 5rem;
+		width: 35rem;
+		box-shadow: 0 20px 20px rgba(0,0,0,0.2), 0px 0px 30px;
+	}
+
+	.sneaker {
+		min-height: 35vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.sneaker img {
+		width: 20rem;
+		z-index: 2;
+		transition:all 0.75s ease;
+	}
+
+	.circle {
+		width: 15rem;
+		height: 15rem;
+		border-radius: 50%;
+		background: linear-gradient(to right, rgba(247,70,66,0.75),rgba(8,83,156,0.75));
+		position: absolute;
+		z-index: 1;
+	}
+
+    .info h1 {
+    	font-size: 3rem;
+    	padding: 2rem;
+    	color: #585858;
+    	font-weight: lighter;
+    	transition:all 0.75s ease;
+    }
+
+      .info h3 {
+    	font-size: 1.3rem;
+    	padding: 2rem 0rem;
+    	color: #585858;
+    	font-weight: lighter;
+    	transition:all 0.75s ease;
+    }
+
+    .sizes {
+        display: flex;
+        justify-content: space-between;
+        transition:all 0.75s ease;
+    }
+
+    .sizes button {
+    	padding: 0.5rem 2rem;
+    	background: none;
+    	border:none;
+    	outline: none;
+    	box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    	border-radius: 30px;
+    	font-weight: #585858;
+    	cursor: pointer;
+    }
+
+    .sizes button:active {
+    	border:none;
+    }
+
+    button.active {
+        background: #585858;
+        color:white;
+    }
+
+    .purchase {
+    	margin-top: 5rem;
+    }
+
+    .purchase button {
+    	background: #f54642;
+    	width: 100%;
+    	padding: 10px 0;
+    	border:none;
+    	color:white;
+    	cursor: pointer;
+    	border-radius: 30px;
+    	font-weight: bold;
+    	outline: none;
+    	transition:all 0.75s ease;
+    	cursor: pointer;
+    }
+
+    /*loading*/
+    .section {
+    	padding: 20px;
+    	width: 100%;
+    	height: auto;
+    	background: #333;
+    }
+
+    .loading {
+	    position: relative;
+	    left: 50%;
+	    width: 250px;
+	    height: 250px;
+	    bottom: 0;
+    
+    }
+
+    .loading .blocks {
+    	position: absolute;
+    	width: 8px;
+    	height: 25px;
+    	border-radius: 30px;
+    	background: black;
+    	transform: rotate(calc(18deg * var(--i)));
+    	transform-origin: 0 125px;
+    	animation: animate 2s ease-in-out infinite;
+    	animation-delay: calc(0.05s * var(--i))
+    }
+
+    @keyframes animate {
+    	0%,50% { background: #050c09; box-shadow: none; }
+
+    	50.1%,100% { background: #0f0; box-shadow: 0 0 5px #0f0,0 0 15px #0f0,0 0 20px #0f0, 0 0 30px #0f0; }
+    }
+
+    .loading p {
+		position: absolute;
+	    top: 50%;
+	    font-size: 22px;
+	    transform: translate(-50%, -50%);
+	    animation: loading 2s ease infinite;
+    }
+
+    @keyframes loading {
+    	0%,50% {color: #050c09; text-shadow: none; }
+    	51.1%,100%{color:#0f0;text-shadow: 0 0 5px #0f0,0 0 5px #0f0,0 0 10px #0f0, 0 0 15px #0f0;}
+    }
+
+    
+
+</style>
+
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="container">
+		<div class="card">
+			<div class="sneaker">
+				<div class="circle"></div>
+				<img src="./adidas.png" alt="">
+			</div>
+		
+
+			<div class="info">
+				<h1 class="title">Adidas ZX</h1>
+				<h3>FUTURE-READY TRAINERS WITH WRAPPED BOOST FOR EXCEPTION COMFORT</h3>
+
+					<div class="sizes">
+						<button>39</button>
+						<button>40</button>
+						<button class="active">41</button>
+						<button>42</button>
+					</div>
+
+					<div class="purchase">
+						<button>purchase</button>
+					</div>
+		    </div>
+	    </div>
+	</div>
+	</div>
+	
+
+	<!-- loading -->
+<div class="section">
+	<div class="loading">
+		<div class="blocks" style="--i:1;"></div>
+		<div class="blocks" style="--i:2;"></div>
+		<div class="blocks" style="--i:3;"></div>
+		<div class="blocks" style="--i:4;"></div>
+		<div class="blocks" style="--i:5;"></div>
+		<div class="blocks" style="--i:6;"></div>
+		<div class="blocks" style="--i:7;"></div>
+		<div class="blocks" style="--i:8;"></div>
+		<div class="blocks" style="--i:9;"></div>
+		<div class="blocks" style="--i:10;"></div>
+		<div class="blocks" style="--i:11;"></div>
+		<div class="blocks" style="--i:12;"></div>
+		<div class="blocks" style="--i:13;"></div>
+		<div class="blocks" style="--i:14;"></div>
+		<div class="blocks" style="--i:15;"></div>
+		<div class="blocks" style="--i:16;"></div>
+		<div class="blocks" style="--i:17;"></div>
+		<div class="blocks" style="--i:18;"></div>
+		<div class="blocks" style="--i:19;"></div>
+		<div class="blocks" style="--i:20"></div>
+		<p>loading</p>
+	</div>
+
+
+</div>
+	<!-- gradient blocks -->
+
+	<script>
+        const container = document.querySelector('.container');
+        const card = document.querySelector('.card');
+
+        const title = document.querySelector('.title');
+        const sneaker = document.querySelector('.sneaker img');
+        const purchase = document.querySelector('.purchase button');
+        const description = document.querySelector('.info h3');
+        const sizes = document.querySelector('.sizes');
+
+
+
+		card.addEventListener( 'mousemove', function( e ) {
+
+			let x = ( window.innerWidth / 2 - e.pageX ) / 25;
+			let y = ( window.innerHeight / 2 - e.pageY ) / 25;
+			card.style.transform =`rotateY( ${ x }deg ) rotateX( ${ y }deg )`;
+
+			title.style.transform = 'translateZ( 150px )'
+			sneaker.style.transform = 'translateZ( 200px ) rotateZ( -45deg )';
+			description.style.transform = 'translateZ( 125px )'
+			sizes.style.transform = 'translateZ( 100px )'
+			purchase.style.transform = 'translateZ( 75px '
+			
+		})
+
+
+		container.addEventListener( 'mouseenter', function( e ) {
+
+			card.style.transition='none';
+			
+			
+		})
+
+		container.addEventListener( 'mouseleave', function( e ) {
+
+			card.style.transform =`rotateY( ${ 0 }deg ) rotateX( ${ 0 }deg )`
+			card.style.transition='all 0.5s ease';
+			
+			title.style.transform = 'translateZ(0)';
+			sneaker.style.transform = 'translateZ( 0px ) rotateZ( 0deg )';
+			description.style.transform = 'translateZ( 0px )';
+			sizes.style.transform = 'translateZ( 0px )'
+		    purchase.style.transform = 'translateZ( 0px )'
+
+		})
+
+	sizes.onclick = function( e ) {
+         var buttons = document.querySelectorAll('.sizes button');
+         var target = e.target;
+		
+        for ( var i = 0; i < buttons.length; i++ ) {
+
+			buttons[i].classList.remove('active')
+			setTimeout(()=>target.classList.add('active'),50 )
+                   
+        }
+
+	}
+		// document.body.onmousemove=function(e){
+  //    let x = ( window.innerWidth / 2 - e.pageX ) / 15;
+ 
+  //   console.log(x)
+
+  //      document.querySelector('h1').style.transform=`rotateY(${x}deg) translateX(${x}px)translateZ(200px) scale(0.5)`
+		// }
+		
+	</script>
+	
+</body>
+</html>
